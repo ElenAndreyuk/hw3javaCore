@@ -1,4 +1,4 @@
-
+import java.sql.Date;
 
 public class Employee implements Comparable<Employee>{
     private String name;
@@ -6,6 +6,13 @@ public class Employee implements Comparable<Employee>{
     int age;
     String phone;
     float salary;
+
+    //Написать прототип компаратора - метод внутри класса сотрудника,
+    // сравнивающий две даты, представленные в виде трёх чисел гггг-мм-дд,
+    // без использования условного оператора.
+    public static int compareDate(Date date1, Date date2){
+        return date1.compareTo(date2);
+    }
 
     public Employee(String name, String position) {
         this.name = name;
